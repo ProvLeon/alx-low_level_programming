@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - entry point
- * This is printed out using the printf function 
- * the main function returns no value if no error occurs
+ * main - Entry point
+ *
+ * Return: Always 0 (if Successful)
  */
 int main(void)
 {
