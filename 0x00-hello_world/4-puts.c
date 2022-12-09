@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-/* 
- * This will return a string 
- * main is the entry point
- * if no error occurs, main returns nothing
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
