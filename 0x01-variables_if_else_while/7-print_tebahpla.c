@@ -5,16 +5,14 @@
 /**
  * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: Always 0 (if successful)
  */
-
 int main(void)
 {
-	char low;
-
-	for (low = 'z'; low >= 'a'; low--)
-		putchar(low);
+	char lcase;
+	
+	for (lcase = 'z'; lcase >= 'a'; lcase--)
+		putchar(lcase);
 		putchar('\n');
-
 	return (0);
 }
