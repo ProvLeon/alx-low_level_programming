@@ -14,6 +14,7 @@ char *_strcpy(char *dest, const char *src)
 
 	while (src[index])
 	{
+		memset(dest, '\0', sizeof(dest));
 		dest[index] = src[index];
 		index++;
 	}
