@@ -1,6 +1,6 @@
 /*
  * File: 3-add_dnodeint_end.c
- * Auth: Lomotey Okantah Emmanuel 
+ * Auth: Lomotey Okantah Emmanuel
  */
 
 #include "lists.h"
