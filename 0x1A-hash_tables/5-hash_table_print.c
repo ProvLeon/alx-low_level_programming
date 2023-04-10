@@ -4,6 +4,8 @@
  * hash_table_print - prints the keys and values of the hash table
  *
  * @ht: pointer to the hash table
+ * if ht is NULL, don't print anything
+ *
  * Return: nothing 
  */
 void hash_table_print(const hash_table_t *ht)
