@@ -1,65 +1,61 @@
 #include "hash_tables.h"
 
 /**
- * add_n_hash - adds a node at the beginning of a hash at a given index
+ * hash_table_set - adds an element to the hash table.
  *
- * @head: head of the hash linked list
- * @key: key of the hash
- * @value: value to store
- * Return: head of the hash
+ * @ht: Pointer to hash_table_t
+ * @key: key
+ * @value: is the value associated with the key
+ *
+ * Return: 1 if it succeeded, 0 otherwise
  */
-hash_node_t *add_n_hash(hash_node_t **head, const char *key, const char *value)
+
+int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *tmp;
+	unsigned long int index = 0;
+	int returAdd = 0;
 
-	tmp = *head;
-
-	while (tmp != NULL)
-	{
-		if (strcmp(key, tmp->key) == 0)
-		{
-			free(tmp->value);
-			tmp->value = strdup(value);
-			return (*head);
-		}
-		tmp = tmp->next;
-	}
-
-	tmp = malloc(sizeof(hash_node_t));
-
-	if (tmp == NULL)
-		return (NULL);
-
-	tmp->key = strdup(key);
-	tmp->value = strdup(value);
-	tmp->next = *head;
-	*head = tmp;
-
-	return (*head);
+	if (key == NULL || ht == NULL)
+		return (0);
+	index = key_index((unsigned char *)key, ht->size);
+	returAdd = add_node(&(ht)->array[index], (char *)key, (char *)value);
+	if (returAdd == 1)
+		return (1);
+	return (0);
 }
 
 /**
- * hash_table_set - adds a hash (key, value) to a given hash table
+ * add_node - adds a new node at the beginning of hash_node_t
  *
- * @ht: pointer to the hash table
- * @key: key of the hash
- * @value: value to store
- * Return: 1 if successes, 0 if fails
+ * @head: Pointer to head of the hash_node_t
+ * @key: key
+ * @value: is the value associated with the key
+ *
+ * Return: 1 if it succeeded, 0 otherwise
  */
-int hash_table_set(hash_table_t *ht, const char *key, const char *value)
+
+int add_node(hash_node_t **head, char *key, char *value)
 {
-	unsigned long int k_index;
+	hash_node_t *new_node = (hash_node_t *) malloc(sizeof(hash_node_t));
+	hash_node_t *aux = (*head);
 
-	if (ht == NULL)
+	if (new_node == NULL)
 		return (0);
 
-	if (key == NULL || *key == '\0')
-		return (0);
-
-	k_index = key_index((unsigned char *)key, ht->size);
-
-	if (add_n_hash(&(ht->array[k_index]), key, value) == NULL)
-		return (0);
-
+	while (aux != NULL)
+	{
+		if (strcmp(aux->key, key) == 0)
+		{
+			free(aux->value);
+			aux->value = strdup(value);
+			free(new_node);
+			return (1);
+		}
+		aux = aux->next;
+	}
+	new_node->key = strdup(key);
+	new_node->value = strdup(value);
+	new_node->next = (*head);
+	(*head) = new_node;
 	return (1);
 }
