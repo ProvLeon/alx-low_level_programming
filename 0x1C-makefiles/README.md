@@ -1,6 +1,6 @@
 # 0x1C. C - Makefiles
 
-## GENERAL :open_book::open_book::open_book
+## GENERAL :open_book::open_book::open_book:
 
 <ol>
 	<li>What are <code>make</code>, Makefiles</li>
@@ -11,26 +11,26 @@
 	<li>What are variables and how to set and use them</li>
 </ol>
 
-## RESOURCES:
+## RESOURCES
 
- <ol>
-	<li><a href="/rltoken/E3lCL-6xT3Qt_K38Tk4s_g" title="Makefile" target="_blank">Makefile</a> </li>
+<ol>
+	<li><a href="https://www.google.com/search?q=makefile" title="Makefile" target="_blank">Makefile</a> </li>
 </ol>
 
-## INTRODUCTION TO FILES :closed_book::closed_book::closed_book::
+## INTRODUCTION TO FILES :closed_book::closed_book::closed_book:
 
-0.	[**0-Makefile**:](#0-Makefile) Create your first Makefile.Requirements
-1.	[**1-Makefile**:](#1-Makefile) Requirements
+0. [**0-Makefile**:](#0-makefile) Create your first Makefile.Requirements
+1. [**1-Makefile**:](#1-makefile) Requirements
 
-## FILES :bookmark_tabs::bookmark_tabs::bookmark_tabs::
+## FILES :bookmark_tabs::bookmark_tabs::bookmark_tabs:
 
 ### 0-Makefile
 
 **<p>Create your first Makefile.</p><p>Requirements</p>**
 
-<pre><code>leon㉿DESKTOP-M491LIV:~/0x1C. Makefiles$ make -f 0-Makefile
+<pre><code>julien@ubuntu:~/0x1C-makefiles$ make -f 0-Makefile
 gcc main.c holberton.c -o holberton
-leon㉿DESKTOP-M491LIV:~/0x1C. Makefiles$ ./holberton
+julien@ubuntu:~/0x1C-makefiles$ ./holberton
 j#0000000000000000000000000000000000000
 j#000000000000000000@Q**g00000000000000
 j#0000000000000000*]++]4000000000000000
@@ -56,18 +56,18 @@ j#0000000000000@@+wgdA]+J00000000000000
 j#0000000000000k?qwgdC=]4#0000000000000
 j#00000000000000w]+]++qw#00000000000000
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-leon㉿DESKTOP-M491LIV:~/0x1C. Makefiles$
+julien@ubuntu:~/0x1C-makefiles$
 </code></pre>
 
 ### 1-Makefile
 
 **<p>Requirements</p>**
 
-<pre><code>leon㉿DESKTOP-M491LIV:~/0x1C. Makefiles$ make -f 1-Makefile
+<pre><code>julien@ubuntu:~/0x1C-makefiles$ make -f 1-Makefile
 gcc main.c holberton.c -o holberton
-leon㉿DESKTOP-M491LIV:~/0x1C. Makefiles$ make -f 1-Makefile
+julien@ubuntu:~/0x1C-makefiles$ make -f 1-Makefile
 gcc main.c holberton.c -o holberton
-leon㉿DESKTOP-M491LIV:~/0x1C. Makefiles$
+julien@ubuntu:~/0x1C-makefiles$
 </code></pre>
 
 ## Author
